@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1540816373 source:c:\users\user\desktop\info\lab-2-teme\problems.cpp
+	<iostream>
+	<math.h>
+
+1541941227 source:c:\users\user\desktop\info\lab-2-teme\problem3.cpp
+	<iostream>
+	<string.h>
+
