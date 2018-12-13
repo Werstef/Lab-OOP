@@ -71,8 +71,10 @@ public:
         this->instructiuni_robot = instructiuni_robot;
     }
     string getInstructiuniRobot(){
+        instructiuni_viteza =
         return this->instructiuni_robot;
     }
+    // cum sa returnam si viteza
 };
 
 int main () {

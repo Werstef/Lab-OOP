@@ -25,7 +25,7 @@ public:
         cout<<"mesaj din Form"<<endl;
     }
     void perimetru(){
-        cout << "This function is supposed to be used in the inheritance clasees" << endl;
+        cout << "This function is supposed to be used in the inheritance classes" << endl;
     };
 };
 

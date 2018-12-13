@@ -5,8 +5,6 @@ class Student{
 
 private:
      int grade;
-
-
 public:
     static int number_of_instances ;
     Student(){

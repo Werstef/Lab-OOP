@@ -3,8 +3,6 @@
 
 using namespace std;
 
-
-
 class Course {
 protected:
 	string name_course;
@@ -99,13 +97,13 @@ int main () {
 		student_aux->next_student = student1->createStudent(student1);
 		student_aux = student_aux->next_student;
 	}
-	cout << "Sunt " << Student::number_of_instances << " studenti." << endl;
+	cout << "There are " << Student::number_of_instances << " students in the list" << endl;
 	student1->display_list(student1);
 	student_aux = student1->search_student(3, student1);
 	student_aux->course.setNameCourse("OOP");
 	student_aux->delete_student(student_aux);
 	cout << endl << "Student 4 has been deleted" << endl;
-	cout << endl << "Sunt " << Student::number_of_instances << " studenti." << endl;
+	cout << endl << "There are " << Student::number_of_instances << " students in the list" << endl;
 	student1->display_list(student1);
 	student1->courseStudents("OOP", student1);
 
