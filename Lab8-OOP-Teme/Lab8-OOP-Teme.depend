@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1544201773 source:c:\users\werstef\desktop\info\lab8-oop-teme\problem1.cpp
+	<iostream>
+	<math.h>
+
