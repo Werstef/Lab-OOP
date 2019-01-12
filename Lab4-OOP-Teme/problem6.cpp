@@ -91,6 +91,7 @@ public:
             }
         }
         cout << "There is no student with a 5 mark" << endl;
+        return NULL;
     }
 };
 

@@ -3,12 +3,12 @@
 
 using namespace std;
 
-class NrComp {
+class ComplexNumber {
 protected:
     double re;
 	double im;
 public:
-	NrComp(double re, double im) {
+	ComplexNumber(double re, double im) {
 		this->re= re;
 		this->im = im;
 	}
@@ -25,36 +25,34 @@ public:
         return this->im;
 	}
 
-	friend double operator~(const NrComp &numar);
-	friend NrComp operator^(const NrComp &numar, const int power);
 };
 
-double operator~(NrComp &numar) {
-	return sqrt(numar.getRe() * numar.getIm() + numar.getRe() * numar.getIm());
+double operator~(ComplexNumber &number) {
+	return sqrt(number.getRe() * number.getIm() + number.getRe() * number.getIm());
 }
 
-NrComp operator^(NrComp &numar, const int power) {
-	NrComp numar_aux = numar;
+ComplexNumber operator^(ComplexNumber &number, const int power) {
+	ComplexNumber number_aux = number;
 	double re_aux;
 	double im_aux;
 	for (int i = 1; i < power; i++) {
-		re_aux = numar_aux.getRe() * numar.getRe() - numar_aux.getIm() * numar.getIm();
-		im_aux = numar_aux.getRe() * numar.getIm() + numar_aux.getIm() * numar.getRe();
+		re_aux = number_aux.getRe() * number.getRe() - number_aux.getIm() * number.getIm();
+		im_aux = number_aux.getRe() * number.getIm() + number_aux.getIm() * number.getRe();
 
-		numar_aux.setRe(re_aux);
-		numar_aux.setIm(im_aux);
+		number_aux.setRe(re_aux);
+		number_aux.setIm(im_aux);
 	}
-	return numar_aux;
+	return number_aux;
 }
 
 int main () {
-	NrComp numar(3.0, 4.0);
+	ComplexNumber number(3.0, 4.0);
 
-	cout << "Modulus of our number is " << ~numar << endl;
+	cout << "Modulus of our number is " << ~number << endl;
 
-	numar = numar^2;
+	number = number^2;
 
-	cout << "The number at the power of 2 is " <<numar.getRe() << " + " << numar.getIm() << "i" << endl;
+	cout << "The number at the power of 2 has the real part " << number.getRe() <<" and the imaginary part " << number.getIm()  << endl;
 
     return 0;
 }

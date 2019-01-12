@@ -31,7 +31,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="problem3.cpp" />
+		<Unit filename="problem5.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
